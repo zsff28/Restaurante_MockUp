@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# El proceso se activará cada vez que hagas un "git push" a la rama main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Descarga el código del repositorio en el servidor de GitHub
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Instala el entorno de .NET
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x' # Puedes cambiarlo a '9.0.x' o la versión que estés usando
+
+    # 3. Compila y publica el proyecto en modo Release
+    - name: Publish Blazor Project
+      run: dotnet publish -c Release -o release
+
+    # 4. Soluciona el enrutamiento de GitHub Pages duplicando el index.html como 404.html
+    - name: Create 404.html for routing
+      run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+    # 5. Corrige de forma automática la ruta base en index y 404 usando el nombre de tu repositorio
+    # REEMPLAZA "nombre-de-tu-repositorio" (línea de abajo) por el nombre exacto de tu repo en GitHub
+    - name: Fix base href path
+      run: |
+        sed -i 's/<base href="\/" \/>/<base href="\/Restaurante_MockUp\/" \/>/g' release/wwwroot/index.html
+        sed -i 's/<base href="\/" \/>/<base href="\/Restaurante_MockUp\/" \/>/g' release/wwwroot/404.html
+
+    # 6. Toma la carpeta procesada y la sube automáticamente a la rama 'gh-pages'
+    - name: Deploy to GitHub Pages Branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: release/wwwroot
