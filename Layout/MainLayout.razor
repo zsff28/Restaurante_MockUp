@@ -2,22 +2,24 @@
 
 <nav class="navbar shadow-sm p-0" style="background-color:#0B1D2E">
     <div class="container-fluid">
+        <ul class="nav nav-underline justify-content-end">
+            <NavLink class="nav-item" aria-current="page">
+                <a class="nav-link" href="menu">Menú</a>
+            </NavLink>
+            <NavLink class="nav-item" aria-current="page">
+                <a class="nav-link" href="pedidos">Pedidos</a>
+            </NavLink>
+        </ul>
         <a class="navbar-brand d-flex align-items-center fw-bold" href="">
             <img src="logo.svg" alt="Logo" width="500" class="d-inline-block align-text">
         </a>
         <ul class="nav nav-underline justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Menú</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Reservar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Clientes</a>
-            </li>
+            <NavLink class="nav-item" aria-current="page">
+                <a class="nav-link" href="clientes">Clientes</a>
+            </NavLink>
+            <NavLink class="nav-item" aria-current="page">
+                <a class="nav-link" href="reservaciones">Reservar</a>
+            </NavLink>
         </ul>
     </div>
 </nav>
