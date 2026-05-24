@@ -54,7 +54,7 @@
 }
 
 .btn-nautical-reserve:hover {
-    color: #0B1D2E;
+    color: #0B1D2E !important;
     background-color: #E6D5B8 !important;
     border-color: #E6D5B8 !important;
     box-shadow: 0 0 15px rgba(230, 213, 184, 0.4); 
@@ -208,4 +208,112 @@
 .cont-hist p{
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+}
+
+/*Dashboard reservaciones y menú*/
+
+/* --- Dashboard --- */
+.dashboard-section {
+    background-color: #0B1D2E;
+    padding: 35px 0;
+}
+
+.dashboard-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #A68A64;
+    margin-bottom: 10px;
+}
+
+.dashboard-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #E6D5B8;
+}
+
+.card-dash {
+    background-color: #0B1D2E;
+    border: 1px solid rgba(166, 138, 100, 0.25); /* Color A68A64. Se usa RGB para opacidad. */
+    border-radius: 4px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.4s ease-in-out; /* Anima todos los elemntos de la tarjeta. Es una animación que comienza despacio (acelera), mantiene una velocidad constante en medio y desaselera al final.*/
+}
+
+/* Efecto para mover la tarjeta hacia arriba */
+.card-dash:hover {
+    border-color: #A68A64;
+    box-shadow: 0 15px 35px rgba(11, 29, 46, 0.8), 0 0 15px rgba(166, 138, 100, 0.15); /* Dos sombras. La primera para dar profundidad, que parezca que el elemento flota, y la segunda para dar un brillo tipo neon.*/
+    transform: translateY(-5px);
+}
+
+.card-dash-status {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #4F6D7A;
+    margin-bottom: 16px;
+}
+
+/* Contador o número */
+.card-dash-counter {
+    font-family: 'Outfit', sans-serif;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 1;
+    color: #E6D5B8;
+    margin-bottom: 10px;
+}
+
+/* Etiqueta de contador */
+.card-dash-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #A68A64;
+    margin-bottom: 16px;
+}
+
+.card-dash-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #C0D6DF;
+    margin-bottom: 30px;
+}
+
+/* Enlace a menú y reservaciones*/
+.card-dash-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #C0D6DF;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.card-dash-link:hover {
+    color: #E6D5B8;
+}
+
+/* Distinción de enlace de reservaciones */
+.highlight-link {
+    color: #A68A64;
+    border-bottom: 1px solid rgba(166, 138, 100, 0.4); /* Color A68A64 con 40% de opacidad*/
+    padding-bottom: 4px;
+}
+
+.highlight-link:hover {
+    color: #E6D5B8;
+    border-bottom-color: #E6D5B8;
 }
