@@ -5,7 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante</title>
-    <base href="/" />
+    <script>
+        var path = window.location.pathname;
+        // Si la URL incluye localhost, la raíz es "/"
+        if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+            document.write('<base href="/" />');
+        } else {
+            // Si estás en GitHub Pages, usa el nombre de tu repositorio
+            document.write('<base href="/Restaurante-Orizon/" />');
+        }
+    </script>
     <link rel="preload" id="webassembly" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/styles.css" />
