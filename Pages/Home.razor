@@ -96,14 +96,14 @@
                 </div>
             </div>
 
-            <!-- Reservaciones -->
+            <!-- Reservaciones confirmadas y botón enlace para reservar -->
             <div class="col-md-5">
                 <div class="card-dash">
                     <p class="card-dash-status">CUPO LIMITADO</p>
                     <h3 class="card-dash-counter">15</h3>
                     <h4 class="card-dash-label">RESERVACIONES CONFIRMADAS</h4>
                     <p class="card-dash-description">Garantice su lugar en el muelle privado. Mantenemos un aforo estrictamente reducido para preservar la exclusividad.</p>
-                    <a href="reservaciones" class="card-dash-link highlight-link">
+                    <a href="reservar" class="card-dash-link highlight-link">
                         <span>RESERVAR ESPACIO</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -111,5 +111,71 @@
             </div>
 
         </div>
+    </div>
+</div>
+
+<!-- Sólo personal. Enlace a Pedidos, Clientes y Reservaciones históricas -->
+<div class="staff-management-section">
+    <div class="container py-5">
+
+        <div class="d-flex align-items-center mb-4">
+            <h2 class="staff-section-title">CONSOLA DE OPERACIONES</h2>
+            <div class="staff-divider-line ms-3 flex-grow-1"></div>
+            <span class="staff-badge ms-2">SOLO PERSONAL</span>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card Pedidos -->
+            <div class="col-md-4">
+                <a href="pedidos" class="staff-operative-card text-decoration-none">
+                    <div class="staff-card-content">
+                        <div class="staff-icon-wrapper">
+                            <i class="bi bi-bell-fill staff-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="staff-card-label">MONITOREO DE PEDIDOS</h3>
+                            <p class="staff-card-desc">Comanda digital y cocina en tiempo real.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card Clientes -->
+            <div class="col-md-4">
+                <a href="clientes" class="staff-operative-card text-decoration-none">
+                    <div class="staff-card-content">
+                        <div class="staff-icon-wrapper">
+                            <i class="bi bi-people-fill staff-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="staff-card-label">DIRECTORIO DE CLIENTES</h3>
+                            <p class="staff-card-desc">Datos de contacto de clientes.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card Reservaciones -->
+            <div class="col-md-4">
+                <a href="reservaciones" class="staff-operative-card text-decoration-none">
+                    <div class="staff-card-content">
+                        <div class="staff-icon-wrapper">
+                            <i class="bi bi-journal-text staff-icon"></i>
+                        </div>
+                        <div>
+                            <h3 class="staff-card-label">LIBRO DE RESERVACIONES</h3>
+                            <p class="staff-card-desc">Asignación de mesas y registros activos.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="mt-3 text-end">
+            <p class="staff-notice">* Para registrar una reserva telefónica a mano, use el botón "Reservar" del menú de navegación actuando en nombre del miembro.</p>
+        </div>
+
     </div>
 </div>
