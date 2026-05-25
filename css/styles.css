@@ -50,7 +50,7 @@
     border: 1px solid #A68A64 !important;
     border-radius: 50px;
     background: transparent;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animación a todas las propiedades que cambian. La animación arranca rápido (primeros dos valores) y se frena con suavidad (últimos dos valores). */
+    transition: all 0.4s ease; /* Animación a todas las propiedades que cambian. */
 }
 
 .btn-nautical-reserve:hover {
@@ -316,4 +316,117 @@
 .highlight-link:hover {
     color: #E6D5B8;
     border-bottom-color: #E6D5B8;
+}
+
+/* Zona empleados. Enlaces a Pedidos, Reservaciones y Clientes */
+
+.staff-management-section {
+    background-color: #0B1D2E;
+    padding: 30px 0;
+    border-top: 1px dashed rgba(79, 109, 122, 0.3); /* Color 4F6D7A */
+}
+
+.staff-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: #4F6D7A;
+    margin: 0;
+}
+
+/* Linea entre "Consola de operaciones" y "Solo personal" */
+.staff-divider-line {
+    height: 1px;
+    background-color: rgba(79, 109, 122, 0.2); /* Color 4F6D7A */
+}
+
+/* Cuadro solo personal */
+.staff-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #4F6D7A;
+    border: 1px solid rgba(79, 109, 122, 0.4); /* Color 4F6D7A */
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+/* --- Tarjeta enlace operaciones solo personal --- */
+.staff-operative-card {
+    display: block;
+    background-color: rgba(79, 109, 122, 0.05); /* Color 4F6D7A muy transparente*/
+    border: 1px solid rgba(79, 109, 122, 0.2); /* Color 4F6D7A */
+    border-radius: 4px;
+    padding: 24px;
+    transition: all 0.3s ease; /* Todas los elementos del card */
+}
+
+.staff-operative-card:hover {
+    background-color: rgba(79, 109, 122, 0.15); /* Color 4F6D7A al 15% del color (0 siendo completamente transparente) */
+    border-color: #C0D6DF;
+    transform: translateY(-2px);
+}
+
+.staff-card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Contenedor del Ícono */
+.staff-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgba(192, 214, 223, 0.1); /* Color C0D6DF */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.staff-icon {
+    font-size: 20px;
+    color: #4F6D7A;
+    display: inline-block;
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.staff-operative-card:hover .staff-icon {
+    color: #C0D6DF;
+    transform: scale(1.2); /* Crece ligeramente el ícono */
+}
+
+.staff-operative-card:hover .staff-icon-wrapper {
+    background-color: rgba(192, 214, 223, 0.2); /* Color C0D6DF. Se ilumina levemente el fondo del ícono */
+}
+
+/* Título de la card */
+.staff-card-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #C0D6DF;
+    margin-bottom: 2px;
+}
+
+/* Información de la card*/
+.staff-card-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #4F6D7A;
+    margin: 0;
+}
+
+/* Leyenda inferior */
+.staff-notice {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(79, 109, 122, 0.6); /* Color 4F6D7A ligeramente opaco */
+    margin: 0;
 }
